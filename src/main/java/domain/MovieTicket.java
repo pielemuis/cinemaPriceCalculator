@@ -1,5 +1,7 @@
 package domain;
 
+import java.time.LocalDateTime;
+
 public class MovieTicket
 {
     private MovieScreening movieScreening;
@@ -28,6 +30,10 @@ public class MovieTicket
     public double getPrice()
     {
         return movieScreening.getPricePerSeat();
+    }
+
+    public LocalDateTime getScreeningDate(){
+        return movieScreening.getDateAndTime();
     }
 
     @Override
